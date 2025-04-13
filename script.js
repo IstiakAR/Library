@@ -29,6 +29,7 @@ addBookDialogButton.addEventListener("click", () => {
   const author = document.getElementById("author");
   const pages = document.getElementById("pages");
   const read = document.getElementById("read");
+  console.log(read.checked);
   if (title.value === "" || author.value === "" || pages.value === "") {
     alert("Please fill out all fields");
     return;
@@ -41,7 +42,7 @@ addBookDialogButton.addEventListener("click", () => {
     title.value,
     author.value,
     pages.value,
-    read.value
+    read.checked
   );
   myLibrary.push(book);
   displayBooks();
